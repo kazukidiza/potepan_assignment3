@@ -1,8 +1,7 @@
 //結果表示のところを取得
 let result = document.getElementById("result");
-
+//小数点を入力できる状態
 let decimalEntered = false;
-
 //数字がクリックされた時
 function numberClick(target){
   if(result.value == "0"){
@@ -15,7 +14,6 @@ function numberClick(target){
     result.value += target.value;
   }
 }
-
 //DE ACがクリックされた時
 function deleteClick(target){
   if(target.value == "AC"){
@@ -31,7 +29,6 @@ function deleteClick(target){
   result.value = "0";
   }
 }
-
 //四則演算子がクリックされたとき
 function operatorClick(target){
   if(result.value.slice(-1) == "+" || result.value.slice(-1) == "-" || result.value.slice(-1) == "*" || result.value.slice(-1) == "/"){
@@ -42,7 +39,6 @@ function operatorClick(target){
     decimalEntered = false;
   }
 }
-
 //=がクリックされたとき
 function equalClick(target){
   result.value = eval(result.value);
@@ -52,7 +48,6 @@ function equalClick(target){
     decimalEntered = false;
   }
 }
-
 //.がクリックされた時
 function decimalClick(target){
   if(decimalEntered == true){
@@ -62,9 +57,3 @@ function decimalClick(target){
     decimalEntered = true
   }
 }
-
-
-  
-
-//わからないこと
-//小数点は一回しか打てないようにしてしまったから、小数同士の計算ができない
