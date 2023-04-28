@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css" type="text/css" />
+  <title>電卓</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="title">電卓</div>
+  <div class="container">
+    <div class="calculator">
+      <div class="display">
+        <input type="text" id="result" value="0"/>
+      </div>
+      <div>
+        <input type="button" value="AC" onclick="deleteClick(this)"/>
+        <input type="button" value="DE" onclick="deleteClick(this)"/>
+        <input type="button" value="." onclick="decimalClick(this)"/>
+        <input type="button" value="/" onclick="operatorClick(this)"/>
+      </div>
+      <div>
+        <input type="button" value="7" onclick="numberClick(this)"/>
+        <input type="button" value="8" onclick="numberClick(this)"/>
+        <input type="button" value="9" onclick="numberClick(this)"/>
+        <input type="button" value="*" onclick="operatorClick(this)"/>
+      </div>
+      <div>
+        <input type="button" value="4" onclick="numberClick(this)"/>
+        <input type="button" value="5" onclick="numberClick(this)"/>
+        <input type="button" value="6" onclick="numberClick(this)"/>
+        <input type="button" value="-" onclick="operatorClick(this)"/>
+      </div>
+      <div>
+        <input type="button" value="1" onclick="numberClick(this)"/>
+        <input type="button" value="2" onclick="numberClick(this)"/>
+        <input type="button" value="3" onclick="numberClick(this)"/>
+        <input type="button" value="+" onclick="operatorClick(this)"/>
+      </div>
+      <div>
+        <input type="button" value="00" onclick="numberClick(this)"/>
+        <input type="button" value="0" onclick="numberClick(this)"/>
+        <input  class="equal" type="button" value="=" onclick="equalClick(this)"/>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

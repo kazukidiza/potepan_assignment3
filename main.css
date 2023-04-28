@@ -1,0 +1,101 @@
+/*リセットCSS*/
+body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select {
+    margin: 0;
+    padding: 0;
+}
+*, *:before, *:after {
+    word-break: break-all;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+ul, ol {
+    list-style: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+    color: #333;
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+}
+*, *:before, *:after {
+    word-break: break-all;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    word-break: break-all;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.title {
+  font-size: 60px;
+  text-align: center;
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  background: #474a4d;
+  padding: 20px 10px;
+  border-radius: 15px;
+}
+.calculator input {
+    border: 0;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    box-shadow: -2px -2px 15px;
+    margin: 10px;
+    color: white;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+.display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+  
+}
+.display input {
+  flex: 1;
+  text-align: end;
+  box-shadow: none;
+  border: solid;
+  font-size: 30px;
+}
+input.equal {
+  width: 140px;  
+}
+
+
+
