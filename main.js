@@ -1,6 +1,6 @@
 /*global $*/
 let result = document.getElementById("result");
-let mode = 'integer_mode';
+
 
 
 //数字がクリックされた時
@@ -19,7 +19,7 @@ function numberClick(target){
 //DE ACがクリックされた時
 function deleteClick(target){
   if(target.value == "AC"){
-    mode = 'integer_mode';
+    
     result.value = "";
   }else{
     result.value = result.value.slice(0,-1);
@@ -45,13 +45,15 @@ function equalClick(target){
 
 //.がクリックされた時
   function decimalClick(target){
-    result.value += ".";
-    mode = "decimal_mode";
+    if(result.value.includes(".")){
+      return;
+    }else{
+      result.value += "."; 
+    }
   }
-//DEで最後に打たれた文字が消える
-//=で数式として計算した結果を表示する
-//四則演算子は連続で打とうとすると一つ目がスライスされて二つ目が表示される
-//0の状態で00や0を打っても表示は０
-//小数点は表示が0の状態で打てば0.と表示される。
-//小数点は一度打つと次に+,_,*,/,=,AC,を打つまで使えない
-//.がDEで消された場合のみ直前条件の例外
+
+
+
+
+//わからないこと
+//小数点は一回しか打てないようにしてしまったから、小数同士の計算ができない
