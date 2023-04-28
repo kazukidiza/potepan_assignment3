@@ -1,13 +1,13 @@
-/*global $*/
+//結果表示のところを取得
 let result = document.getElementById("result");
 
-
+let decimalEntered = false;
 
 //数字がクリックされた時
 function numberClick(target){
   if(result.value == "0"){
     if(target.value == "0" || target.value == "00"){
-      result.value += "";
+      return;
     }else{
       result.value = target.value;
     }
@@ -19,8 +19,11 @@ function numberClick(target){
 //DE ACがクリックされた時
 function deleteClick(target){
   if(target.value == "AC"){
-    
     result.value = "";
+    decimalEntered = false;
+  }else if(result.value.slice(-1) == "." && target.value == "DE"){
+    result.value = result.value.slice(0,-1);
+    decimalEntered = false;
   }else{
     result.value = result.value.slice(0,-1);
   }
@@ -33,27 +36,35 @@ function deleteClick(target){
 function operatorClick(target){
   if(result.value.slice(-1) == "+" || result.value.slice(-1) == "-" || result.value.slice(-1) == "*" || result.value.slice(-1) == "/"){
     result.value = result.value.slice(0,-1) + target.value;
+    decimalEntered = false;
   }else{
     result.value += target.value;
+    decimalEntered = false;
   }
 }
 
 //=がクリックされたとき
 function equalClick(target){
   result.value = eval(result.value);
+  if(result.value.includes(".")){
+    decimalEntered = true;
+  }else{
+    decimalEntered = false;
+  }
 }
 
 //.がクリックされた時
-  function decimalClick(target){
-    if(result.value.includes(".")){
-      return;
-    }else{
-      result.value += "."; 
-    }
+function decimalClick(target){
+  if(decimalEntered == true){
+    return;
+  }else{
+    result.value += "."; 
+    decimalEntered = true
   }
+}
 
 
-
+  
 
 //わからないこと
 //小数点は一回しか打てないようにしてしまったから、小数同士の計算ができない
